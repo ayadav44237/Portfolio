@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem clamp(1.25rem, 5vw, 3rem);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: headerSlide 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes headerSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header--scrolled {
+  background: rgba(10, 15, 26, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+.header__logo:hover {
+  color: var(--accent);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.header__link {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.header__link:hover {
+  color: var(--accent);
+}
+
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--text);
+}
+
+.header__toggle-bar {
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+@media (max-width: 768px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(280px, 85vw);
+    height: 100vh;
+    background: var(--bg-card);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .header__nav--open {
+    transform: translateX(0);
+  }
+
+  .header__link {
+    font-size: 1.1rem;
+  }
+
+  .header__toggle {
+    display: flex;
+  }
+
+  .header__nav--open + .header__toggle .header__toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .header__nav--open + .header__toggle .header__toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .header__nav--open + .header__toggle .header__toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

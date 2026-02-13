@@ -1,0 +1,185 @@
+:root {
+  --bg: #0a0f1a;
+  --bg-card: #111827;
+  --bg-elevated: #1e293b;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-dim: #0ea5e9;
+  --border: #334155;
+  --success: #34d399;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  --transition: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: #7dd3fc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-in--visible .section-title::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 640px) {
+  .section-title::after {
+    max-width: 60px;
+  }
+}
+
+/* ---------- Scroll / entrance animations ---------- */
+.animate-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children: fade-in with delay */
+.animate-stagger.animate-in--visible .about__card,
+.animate-stagger.animate-in--visible .skills__group,
+.animate-stagger.animate-in--visible .experience__item,
+.animate-stagger.animate-in--visible .projects__card,
+.animate-stagger.animate-in--visible .education__card,
+.animate-stagger.animate-in--visible .contact__item {
+  animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-stagger.animate-in--visible .about__card { animation-delay: 0.08s; }
+.animate-stagger.animate-in--visible .about__card:nth-child(2) { animation-delay: 0.16s; }
+.animate-stagger.animate-in--visible .about__card:nth-child(3) { animation-delay: 0.24s; }
+.animate-stagger.animate-in--visible .about__footer { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.32s forwards; }
+
+.animate-stagger.animate-in--visible .skills__group:nth-child(1) { animation-delay: 0.08s; }
+.animate-stagger.animate-in--visible .skills__group:nth-child(2) { animation-delay: 0.18s; }
+.animate-stagger.animate-in--visible .skills__group:nth-child(3) { animation-delay: 0.28s; }
+
+.animate-stagger.animate-in--visible .experience__item:nth-child(1) { animation-delay: 0.08s; }
+.animate-stagger.animate-in--visible .experience__item:nth-child(2) { animation-delay: 0.18s; }
+.animate-stagger.animate-in--visible .experience__item:nth-child(3) { animation-delay: 0.28s; }
+
+.animate-stagger.animate-in--visible .projects__card { animation-delay: 0.08s; }
+.animate-stagger.animate-in--visible .projects__more { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s forwards; }
+
+.animate-stagger.animate-in--visible .education__card { animation-delay: 0.08s; }
+
+.animate-stagger.animate-in--visible .contact__text { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards; }
+.animate-stagger.animate-in--visible .contact__item:nth-child(1) { animation-delay: 0.12s; }
+.animate-stagger.animate-in--visible .contact__item:nth-child(2) { animation-delay: 0.18s; }
+.animate-stagger.animate-in--visible .contact__item:nth-child(3) { animation-delay: 0.24s; }
+.animate-stagger.animate-in--visible .contact__item:nth-child(4) { animation-delay: 0.3s; }
+.animate-stagger.animate-in--visible .contact__resume { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.36s forwards; }
+
+.about__card,
+.skills__group,
+.experience__item,
+.projects__card,
+.projects__more,
+.education__card,
+.about__footer,
+.contact__text,
+.contact__item,
+.contact__resume {
+  opacity: 0;
+}
+
+.animate-in--visible .section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-in:not(.animate-in--visible) .section-title {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
