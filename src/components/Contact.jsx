@@ -35,7 +35,7 @@ export default function Contact() {
             <span>GitHub</span>
           </a>
         </div>
-        <a href="/Alok_latest_Resume.pdf" className="contact__resume" download>
+        <a href="https://drive.google.com/uc?export=download&id=1A7bafXoYAIGwInFP9JvwNnQlJLzlKBwt" className="contact__resume" target="_blank" rel="noopener noreferrer">
           Download Resume (PDF)
         </a>
       </div>
