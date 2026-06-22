@@ -1,8 +1,11 @@
 import './Hero.css'
 
+const badges = ['React', 'Angular', 'Node.js', 'AI-Accelerated']
+
 export default function Hero() {
   return (
     <section className="hero" id="hero">
+      <div className="hero__glow" aria-hidden="true" />
       <div className="hero__content">
         <div className="hero__image-wrap">
           <img
@@ -14,18 +17,32 @@ export default function Hero() {
         <div className="hero__text">
           <p className="hero__greeting">Hi, I'm</p>
           <h1 className="hero__name">Alok Yadav</h1>
-          <p className="hero__title">Software Development Engineer</p>
-          <p className="hero__tagline">
-            Building reliable, user-centric products with clean code and scalable architecture.
+          <p className="hero__title">
+            Full-Stack Developer
+            <span className="hero__title-sep">·</span>
+            <span className="hero__title-meta">3+ years</span>
           </p>
+          <div className="hero__intro">
+            <div className="hero__badges">
+              {badges.map((badge) => (
+                <span key={badge} className="hero__badge">{badge}</span>
+              ))}
+            </div>
+            <p className="hero__tagline">
+              I build and ship full-stack features <strong>fast</strong> — React & Angular UIs to Node.js APIs and databases. I use <strong>AI-assisted workflows</strong> (Cursor) to move quickly without cutting corners on code quality or architecture.
+            </p>
+            <p className="hero__tagline hero__tagline--impact">
+              Proven impact: <strong>SEO 72→92</strong> on PageSpeed, <strong>30% faster</strong> dashboards, <strong>4 production modules</strong> owned at Swageazy.
+            </p>
+          </div>
           <div className="hero__meta">
             <span className="hero__meta-item">Gurugram, India</span>
             <span className="hero__meta-dot">·</span>
-            <a href="mailto:ayadav44237@gmail.com" className="hero__meta-link">ayadav44237@gmail.com</a>
+            <span className="hero__meta-item">Swageazy · RBH · Crio.do</span>
           </div>
           <div className="hero__cta">
-            <a href="#contact" className="hero__btn hero__btn--primary">Get in touch</a>
-            <a href="#projects" className="hero__btn hero__btn--secondary">View projects</a>
+            <a href="#projects" className="hero__btn hero__btn--primary">View my work</a>
+            <a href="mailto:ayadav44237@gmail.com" className="hero__btn hero__btn--secondary">Get in touch</a>
           </div>
           <div className="hero__links">
             <a href="https://github.com/ayadav44237" target="_blank" rel="noopener noreferrer" className="hero__social" aria-label="GitHub">
@@ -41,7 +58,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero__scroll">
-        <a href="#about" className="hero__scroll-link" aria-label="Scroll to about">
+        <a href="#impact" className="hero__scroll-link" aria-label="Scroll to impact">
           <span className="hero__scroll-icon" />
         </a>
       </div>

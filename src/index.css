@@ -31,6 +31,9 @@ html {
 body {
   font-family: var(--font-sans);
   background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(167, 139, 250, 0.05), transparent);
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -113,6 +116,7 @@ section {
 
 /* Staggered children: fade-in with delay */
 .animate-stagger.animate-in--visible .about__card,
+.animate-stagger.animate-in--visible .impact__card,
 .animate-stagger.animate-in--visible .skills__group,
 .animate-stagger.animate-in--visible .experience__item,
 .animate-stagger.animate-in--visible .projects__card,
@@ -126,6 +130,13 @@ section {
 .animate-stagger.animate-in--visible .about__card:nth-child(3) { animation-delay: 0.24s; }
 .animate-stagger.animate-in--visible .about__footer { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.32s forwards; }
 
+.animate-stagger.animate-in--visible .impact__card:nth-child(1) { animation-delay: 0.05s; }
+.animate-stagger.animate-in--visible .impact__card:nth-child(2) { animation-delay: 0.1s; }
+.animate-stagger.animate-in--visible .impact__card:nth-child(3) { animation-delay: 0.15s; }
+.animate-stagger.animate-in--visible .impact__card:nth-child(4) { animation-delay: 0.2s; }
+.animate-stagger.animate-in--visible .impact__card:nth-child(5) { animation-delay: 0.25s; }
+.animate-stagger.animate-in--visible .impact__card:nth-child(6) { animation-delay: 0.3s; }
+
 .animate-stagger.animate-in--visible .skills__group:nth-child(1) { animation-delay: 0.08s; }
 .animate-stagger.animate-in--visible .skills__group:nth-child(2) { animation-delay: 0.18s; }
 .animate-stagger.animate-in--visible .skills__group:nth-child(3) { animation-delay: 0.28s; }
@@ -135,7 +146,9 @@ section {
 .animate-stagger.animate-in--visible .experience__item:nth-child(3) { animation-delay: 0.28s; }
 
 .animate-stagger.animate-in--visible .projects__card { animation-delay: 0.08s; }
-.animate-stagger.animate-in--visible .projects__more { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s forwards; }
+.animate-stagger.animate-in--visible .projects__card:nth-child(2) { animation-delay: 0.14s; }
+.animate-stagger.animate-in--visible .projects__card:nth-child(3) { animation-delay: 0.2s; }
+.animate-stagger.animate-in--visible .projects__card:nth-child(4) { animation-delay: 0.26s; }
 
 .animate-stagger.animate-in--visible .education__card { animation-delay: 0.08s; }
 
@@ -147,6 +160,7 @@ section {
 .animate-stagger.animate-in--visible .contact__resume { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.36s forwards; }
 
 .about__card,
+.impact__card,
 .skills__group,
 .experience__item,
 .projects__card,

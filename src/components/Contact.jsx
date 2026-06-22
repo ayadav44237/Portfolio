@@ -7,7 +7,7 @@ export default function Contact() {
       <h2 className="section-title">Get in Touch</h2>
       <div className="contact__content">
         <p className="contact__text">
-          I'm open to opportunities where I can work on challenging frontend or full-stack problems and build impactful products. Feel free to reach out.
+          I'm actively looking for <strong>Full-Stack Engineer</strong> and <strong>SDE</strong> roles. If you need someone who ships production features, improves performance, and owns work end-to-end — let's connect.
         </p>
         <div className="contact__links">
           <a href="mailto:ayadav44237@gmail.com" className="contact__item">

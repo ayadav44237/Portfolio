@@ -1,0 +1,140 @@
+.impact {
+  padding-top: 0;
+}
+
+.impact__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.impact__card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.9;
+}
+
+.impact__card--cyan::before {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.impact__card--green::before {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.impact__card--violet::before {
+  background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+}
+
+.impact__card--amber::before {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.impact__card--rose::before {
+  background: linear-gradient(90deg, #fb7185, #f43f5e);
+}
+
+.impact__card--teal::before {
+  background: linear-gradient(90deg, #2dd4bf, #14b8a6);
+}
+
+.impact__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.impact__card--cyan:hover { border-color: rgba(56, 189, 248, 0.5); }
+.impact__card--green:hover { border-color: rgba(52, 211, 153, 0.5); }
+.impact__card--violet:hover { border-color: rgba(167, 139, 250, 0.5); }
+.impact__card--amber:hover { border-color: rgba(251, 191, 36, 0.5); }
+.impact__card--rose:hover { border-color: rgba(251, 113, 133, 0.5); }
+.impact__card--teal:hover { border-color: rgba(45, 212, 191, 0.5); }
+
+.impact__value {
+  display: block;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__card--cyan .impact__value {
+  background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__card--green .impact__value {
+  background: linear-gradient(135deg, #6ee7b7, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__card--violet .impact__value {
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__card--amber .impact__value {
+  background: linear-gradient(135deg, #fde68a, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__card--rose .impact__value {
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  background: linear-gradient(135deg, #fda4af, #fb7185);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__card--teal .impact__value {
+  background: linear-gradient(135deg, #5eead4, #2dd4bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact__label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.impact__detail {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .impact__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
