@@ -3,19 +3,19 @@ import './About.css'
 
 const cards = [
   {
-    icon: '⚡',
     title: 'What I do',
-    content: 'Full-stack developer with 3+ years in production. I build React & Angular interfaces, wire them to Node.js APIs, and work with MySQL and MongoDB — owning features from UI through the data layer.',
+    content:
+      'I own product work end-to-end — interfaces, APIs, and data. At Swageazy that covers SaaS modules (Inventory, Campaigns, Swagstore, HRMS) and shipping Swayy as a separate consumer product.',
   },
   {
-    icon: '🧠',
     title: 'How I work',
-    content: 'Strong fundamentals in JavaScript, TypeScript, system design, and clean architecture. I ship fast in Agile teams, optimize for performance and SEO, and use AI tools to accelerate delivery without compromising code quality.',
+    content:
+      'Clear goals, clean architecture, measurable results. I move fast when needed, use modern tooling where it helps, and stay accountable for quality and delivery.',
   },
   {
-    icon: '🎯',
-    title: 'Proof of impact',
-    content: '4 live modules at Swageazy, 10+ apps at Crio.do, SEO score 72→92 on PageSpeed Insights, 30% faster dashboards, and 25% fewer production bugs after refactors.',
+    title: 'What I care about',
+    content:
+      'Work that ships and sticks — faster experiences, fewer production issues, and features teams can use without constant engineering support.',
   },
 ]
 
@@ -24,19 +24,18 @@ export default function About() {
     <AnimatedSection as="section" className="about" id="about" stagger>
       <h2 className="section-title">About</h2>
       <p className="about__lead">
-        Full-stack developer with <strong>3+ years</strong> of experience building production web applications — strong on the frontend with React & Angular, equally comfortable on Node.js backends, APIs, and databases.
+        Full-stack developer with <strong>3+ years</strong> in production. I focus on owning outcomes — not collecting tools.
       </p>
       <div className="about__grid">
         {cards.map((card) => (
           <div key={card.title} className="about__card">
-            <span className="about__icon" aria-hidden="true">{card.icon}</span>
             <h3 className="about__card-title">{card.title}</h3>
             <p>{card.content}</p>
           </div>
         ))}
       </div>
       <p className="about__footer">
-        Currently SDE 1 at Swageazy. Open to full-stack and SDE opportunities where I can own features end-to-end and deliver measurable results.
+        Open to full-stack / SDE roles with real ownership and impact.
       </p>
     </AnimatedSection>
   )

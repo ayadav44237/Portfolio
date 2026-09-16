@@ -3,28 +3,10 @@ import './Impact.css'
 
 const stats = [
   {
-    value: '3+',
-    label: 'Years experience',
-    detail: 'Full-stack delivery across Swageazy, RBH & Crio.do',
+    value: '2 wks',
+    label: 'Swayy shipped live',
+    detail: 'getswayy.com — brand storefront',
     accent: 'amber',
-  },
-  {
-    value: '72 → 92',
-    label: 'PageSpeed SEO score',
-    detail: 'Metadata, structure & performance optimizations',
-    accent: 'rose',
-  },
-  {
-    value: '30%',
-    label: 'Faster dashboards',
-    detail: 'Inventory Dashboard revamp at Swageazy',
-    accent: 'cyan',
-  },
-  {
-    value: '25%',
-    label: 'Fewer prod bugs',
-    detail: 'Legacy refactors across frontend & backend',
-    accent: 'green',
   },
   {
     value: '4+',
@@ -33,9 +15,27 @@ const stats = [
     accent: 'violet',
   },
   {
-    value: '10+',
-    label: 'Apps shipped',
-    detail: 'Production apps at Crio.do & Swageazy',
+    value: '72 → 92',
+    label: 'PageSpeed SEO',
+    detail: 'Structure, metadata & performance',
+    accent: 'rose',
+  },
+  {
+    value: '30%',
+    label: 'Faster dashboards',
+    detail: 'Inventory Dashboard revamp',
+    accent: 'cyan',
+  },
+  {
+    value: '25%',
+    label: 'Fewer prod bugs',
+    detail: 'Legacy frontend & backend refactors',
+    accent: 'green',
+  },
+  {
+    value: '3+',
+    label: 'Years experience',
+    detail: 'Swageazy, RBH & Crio.do',
     accent: 'teal',
   },
 ]

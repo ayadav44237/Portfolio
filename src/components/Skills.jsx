@@ -4,26 +4,45 @@ import './Skills.css'
 const skillGroups = [
   {
     title: 'Frontend',
-    items: ['React', 'Angular', 'TypeScript', 'JavaScript', 'Redux', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive UI'],
+    items: [
+      'Next.js',
+      'React',
+      'Angular',
+      'TypeScript',
+      'JavaScript',
+      'React Query',
+      'Redux',
+      'Tailwind CSS',
+      'HTML5',
+      'CSS3',
+    ],
   },
   {
     title: 'Backend & Data',
-    items: ['Node.js', 'Express', 'REST APIs', 'MySQL', 'MongoDB', 'SQL', 'JWT', 'OAuth', 'CouchDB'],
+    items: ['Node.js', 'Express', 'REST APIs', 'MySQL', 'MongoDB', 'SQL', 'Zod', 'JWT', 'OAuth'],
   },
   {
     title: 'Performance & Tools',
-    items: ['SEO', 'Web Performance', 'Lighthouse', 'Core Web Vitals', 'Git', 'Agile / Jira', 'Cursor', 'GitHub Copilot'],
+    items: [
+      'SEO',
+      'Web Performance',
+      'Lighthouse',
+      'Git',
+      'Agile / Jira',
+      'Bitbucket',
+      'Debugging',
+    ],
   },
 ]
 
-const highlightSkills = new Set(['React', 'Angular', 'Node.js', 'TypeScript', 'SEO'])
+const highlightSkills = new Set(['Next.js', 'React', 'Node.js', 'TypeScript'])
 
 export default function Skills() {
   return (
     <AnimatedSection as="section" className="skills" id="skills" stagger>
       <h2 className="section-title">Technical Skills</h2>
       <p className="skills__lead">
-        Full-stack with depth in <strong>React, Angular & TypeScript</strong> and production experience across <strong>Node.js, REST APIs, and SQL/NoSQL databases</strong>.
+        Stack I use in production day to day.
       </p>
       <div className="skills__grid">
         {skillGroups.map((group) => (

@@ -7,7 +7,11 @@ export default function Contact() {
       <h2 className="section-title">Get in Touch</h2>
       <div className="contact__content">
         <p className="contact__text">
-          I'm actively looking for <strong>Full-Stack Engineer</strong> and <strong>SDE</strong> roles. If you need someone who ships production features, improves performance, and owns work end-to-end — let's connect.
+          Open to <strong>Full-Stack</strong> / <strong>SDE</strong> roles. If you want someone who owns delivery end-to-end and ships real products — like{' '}
+          <a href="https://getswayy.com" target="_blank" rel="noopener noreferrer">
+            getswayy.com
+          </a>{' '}
+          — let's talk.
         </p>
         <div className="contact__links">
           <a href="mailto:ayadav44237@gmail.com" className="contact__item">

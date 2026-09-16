@@ -159,6 +159,17 @@
   font-weight: 600;
 }
 
+.hero__tagline a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero__tagline a:hover {
+  color: #7dd3fc;
+}
+
 .hero__meta {
   font-size: 0.9rem;
   color: var(--text-muted);

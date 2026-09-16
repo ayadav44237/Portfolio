@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <p className="footer__copy">
-          © {year} Alok Yadav · Built with React + Vite + Cursor
+          © {year} Alok Yadav · Built with React + Vite
         </p>
         <div className="footer__links">
           <a href="https://github.com/ayadav44237" target="_blank" rel="noopener noreferrer">GitHub</a>

@@ -98,6 +98,7 @@
 }
 
 .impact__card--amber .impact__value {
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
   background: linear-gradient(135deg, #fde68a, #fbbf24);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

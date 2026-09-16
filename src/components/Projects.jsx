@@ -3,52 +3,51 @@ import './Projects.css'
 
 const projects = [
   {
+    name: 'Swayy — getswayy.com',
+    type: 'Live Product',
+    typeClass: 'production',
+    desc: 'Consumer brand storefront for premium carry gear. Owned the full stack — Next.js frontend and Node/Express/MySQL backend — through production.',
+    tech: 'Next.js, TypeScript, Node.js, Express, MySQL, React Query',
+    highlights: [
+      'Storefront: auth, catalog, cart/checkout, orders, and profile.',
+      'Backend: catalog admin APIs, variants, audit logs, and order emails.',
+    ],
+    live: 'https://getswayy.com',
+  },
+  {
     name: 'Swagstore Platform',
     type: 'Production',
     typeClass: 'production',
-    desc: 'Self-service e-commerce store builder — clients configure branding, products, and publish live stores without engineering support.',
+    desc: 'Self-serve branded store builder for Swageazy enterprise clients — separate from Swayy. Clients set up, brand, stock, and publish without engineering support.',
     tech: 'Angular, Node.js, MySQL, REST APIs',
     highlights: [
-      'Architected 4-step setup flow: Store Info, Branding, Product catalog, Live Preview/Publish.',
-      'SEO-optimized store pages with semantic markup, metadata, and lazy-loaded assets for faster publish-ready stores.',
+      'Setup flow: Store Info → Branding → Catalog → Live Preview/Publish.',
+      'End-to-end ownership across UI and API integrations.',
     ],
   },
   {
     name: 'Inventory Dashboard',
     type: 'Production',
     typeClass: 'production',
-    desc: 'Core inventory management dashboard revamp — faster rendering, reusable components, and improved business logic.',
+    desc: 'Inventory dashboard revamp for Swageazy ops teams — cleaner UI, reusable components, and snappier rendering.',
     tech: 'React, Node.js, MySQL',
     highlights: [
-      '30% reduction in rendering time through UI and logic optimization.',
-      'Performance-tuned with code splitting and reusable components adopted across modules.',
+      'UI and logic cleanup for smoother day-to-day ops workflows.',
+      'Reusable components adopted across modules.',
     ],
   },
   {
     name: 'QKart Express',
     type: 'Full-Stack',
     typeClass: 'fullstack',
-    desc: 'E-commerce app with authentication, shopping cart, and checkout — built with React and Node.js.',
+    desc: 'E-commerce app with authentication, cart, and checkout.',
     tech: 'React, Node.js, Express, MongoDB, MUI',
     highlights: [
-      'Mobile-first UI with auth, cart, and checkout — 20% lower bounce rate, 30% longer sessions.',
-      'REST API integration for 40% faster data retrieval; optimized for performance and responsiveness.',
+      'Mobile-first auth, cart, and checkout flows.',
+      'REST API integration for faster data retrieval.',
     ],
     github: 'https://github.com/ayadav44237/Qkart-Frontend',
     live: 'https://alok-yadav-criodo-me-qkart-frontend-v2.vercel.app/',
-    youtube: 'https://youtu.be/RVAGaNT-GFM',
-  },
-  {
-    name: 'Crio MERN Portfolio',
-    type: '7+ Apps',
-    typeClass: 'portfolio',
-    desc: 'Collection of production-grade MERN applications — auth systems, search optimization, and cloud deployments.',
-    tech: 'React, Redux, Node.js, MongoDB, JWT, OAuth',
-    highlights: [
-      '7+ high-performance UIs with debounced search and secure JWT/OAuth auth.',
-      'Deployed on Netlify, Render, and Vercel with 99.9% uptime.',
-    ],
-    github: 'https://github.com/ayadav44237?tab=repositories',
   },
 ]
 
@@ -83,11 +82,6 @@ export default function Projects() {
                   {proj.live && (
                     <a href={proj.live} target="_blank" rel="noopener noreferrer" className="projects__link">
                       Live
-                    </a>
-                  )}
-                  {proj.youtube && (
-                    <a href={proj.youtube} target="_blank" rel="noopener noreferrer" className="projects__link">
-                      Demo
                     </a>
                   )}
                 </div>

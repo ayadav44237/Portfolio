@@ -2,40 +2,40 @@ import AnimatedSection from './AnimatedSection'
 import './Experience.css'
 
 const timeline = [
-  { year: '2023', label: 'Crio.do — MERN full-stack foundations' },
-  { year: '2024', label: 'RBH Solutions — production features' },
-  { year: '2025–26', label: 'Swageazy — SDE 1, 4 modules owned' },
+  { year: '2023', label: 'Crio.do — shipping production apps' },
+  { year: '2024', label: 'RBH Solutions — full-stack delivery' },
+  { year: '2025–26', label: 'Swageazy — Swayy + core modules' },
 ]
 
 const experiences = [
   {
     company: 'Swageazy',
-    role: 'SDE 1',
+    role: 'SDE 1 (Full-Stack)',
     location: 'Gurgaon, Haryana',
     period: 'Mar 2025 – Present',
-    highlight: '4 modules · SEO 72→92',
+    highlight: 'Swayy in 2 weeks · 4 modules',
     points: [
-      'Own end-to-end delivery across Inventory, Campaigns, Swagstore, and HRMS — React & Angular UIs, Node.js APIs, and MySQL.',
-      'Improved Google PageSpeed Insights SEO score from 72 to 92 through metadata optimization, semantic HTML, lazy loading, and bundle splitting.',
-      'Revamped Inventory Dashboard — 30% faster rendering; refactored API layer and business logic for better maintainability.',
-      'Architected Swagstore self-service flow in Angular with Node.js/MySQL backend — store setup, catalog, and live publish.',
-      'Built Campaign workflows and HRMS redemption with REST API integrations for enterprise clients.',
-      'Refactored legacy frontend and backend codebases — 25% reduction in production bugs.',
+      'Shipped Swayy (getswayy.com) end-to-end in ~2 weeks — consumer storefront + Node.js/MySQL APIs across sibling frontend and backend repos.',
+      'Built Swagstore self-serve for enterprise clients (store setup, branding, catalog, live preview/publish) so stores can launch without engineering support.',
+      'Revamped Inventory Dashboard — 30% faster rendering and cleaner reusable components.',
+      'Improved PageSpeed SEO score from 72 to 92 through structure, metadata, and performance fixes.',
+      'Owned Campaigns and HRMS redemption flows end-to-end for reliable enterprise gifting and rewards.',
+      'Refactored legacy frontend and backend paths — 25% fewer production bugs.',
     ],
-    stack: 'React, Angular, TypeScript, Node.js, MySQL, REST APIs, Redux, SEO',
+    stack: 'Next.js, React, Angular, TypeScript, Node.js, Express, MySQL, REST APIs',
   },
   {
     company: 'RBH Solutions',
     role: 'Full-Stack Developer',
     location: 'Patiala, Punjab',
     period: 'Oct 2024 – Nov 2024',
-    highlight: '40% better UI interactivity',
+    highlight: '40% better interactivity',
     points: [
-      'Built React dashboards for PTW, Event Log, and Xen with Node.js/CouchDB API integrations — 40% boost in real-time interactivity.',
-      'Redesigned HPVNL workflows in React + Redux — 25% faster task completion for end users.',
-      'Delivered responsive, component-driven UIs with Tailwind CSS and SASS alongside backend data flow optimization.',
+      'Integrated and optimized dashboard flows with live APIs — 40% better real-time interactivity.',
+      'Improved HPVNL workflows — 25% faster task completion for end users.',
+      'Collaborated across product and backend to ship fixes faster.',
     ],
-    stack: 'React, Redux, Node.js, CouchDB, Tailwind CSS, SASS, REST APIs',
+    stack: 'React, Redux, Node.js, CouchDB, Tailwind CSS, REST APIs',
   },
   {
     company: 'Crio.do',
@@ -44,11 +44,11 @@ const experiences = [
     period: 'Sep 2023 – Sep 2024',
     highlight: '10+ apps shipped',
     points: [
-      'Delivered 10+ MERN stack projects — React frontends with Node.js/Express APIs and MongoDB.',
-      'Built Redux state management, debounced search, JWT/OAuth auth, and mobile-first responsive layouts.',
-      'Deployed production apps on Netlify, Render, and Vercel; optimized Core Web Vitals and API response times.',
+      'Delivered 10+ production apps with auth, search, and scalable UIs.',
+      'Optimized search with debouncing — ~30% better performance.',
+      'Deployed and maintained apps on Netlify, Render, and Vercel (99.9% uptime).',
     ],
-    stack: 'React, Redux, TypeScript, Node.js, Express, MongoDB, Tailwind CSS, REST APIs',
+    stack: 'React, Redux, TypeScript, Node.js, Express, MongoDB, REST APIs',
   },
 ]
 
@@ -57,7 +57,7 @@ export default function Experience() {
     <AnimatedSection as="section" className="experience" id="experience" stagger>
       <h2 className="section-title">Experience</h2>
       <p className="experience__intro">
-        <strong>3+ years</strong> across <strong>3 companies</strong> — from intensive MERN delivery at Crio.do to owning production modules at Swageazy. I build interfaces, APIs, and data layers that ship and scale.
+        <strong>3+ years</strong> shipping production work across <strong>3 companies</strong>.
       </p>
       <div className="experience__timeline" aria-label="Career timeline">
         {timeline.map((item) => (

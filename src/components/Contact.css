@@ -9,6 +9,20 @@
   margin-bottom: 1.75rem;
 }
 
+.contact__text strong {
+  color: var(--text);
+}
+
+.contact__text a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact__text a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
 .contact__links {
   display: flex;
   flex-direction: column;

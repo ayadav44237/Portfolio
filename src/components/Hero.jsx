@@ -1,6 +1,6 @@
 import './Hero.css'
 
-const badges = ['React', 'Angular', 'Node.js', 'AI-Accelerated']
+const badges = ['Full-Stack', 'End-to-End', '3+ Years']
 
 export default function Hero() {
   return (
@@ -29,10 +29,14 @@ export default function Hero() {
               ))}
             </div>
             <p className="hero__tagline">
-              I build and ship full-stack features <strong>fast</strong> — React & Angular UIs to Node.js APIs and databases. I use <strong>AI-assisted workflows</strong> (Cursor) to move quickly without cutting corners on code quality or architecture.
+              I own features <strong>end-to-end</strong> — from UI to APIs to data — and ship production work that makes products faster, clearer, and easier to use.
             </p>
             <p className="hero__tagline hero__tagline--impact">
-              Proven impact: <strong>SEO 72→92</strong> on PageSpeed, <strong>30% faster</strong> dashboards, <strong>4 production modules</strong> owned at Swageazy.
+              Currently at Swageazy — shipped{' '}
+              <a href="https://getswayy.com" target="_blank" rel="noopener noreferrer">
+                getswayy.com
+              </a>{' '}
+              and own core product modules end-to-end.
             </p>
           </div>
           <div className="hero__meta">

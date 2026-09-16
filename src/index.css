@@ -65,7 +65,7 @@ ul {
 }
 
 section {
-  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+  padding: clamp(2rem, 4.5vw, 3rem) clamp(1.25rem, 5vw, 3rem);
   max-width: 1100px;
   margin: 0 auto;
 }
